@@ -1,4 +1,29 @@
+body {
+  padding: 3em;
+  font-family: "Quicksand", sans-serif;
+}
 .amount {
   border-radius: 0.02em;
   font-size: 1.2em;
+  border: 1px solid #666;
+  padding: 0.3em;
+}
+.denom {
+  padding: 1em 1em 1em 0em;
+  font-size: 1em;
+  display: block;
+  width: 170px;
+  height: 50px;
+  margin-right: 1em;
+  float: left;
+}
+.denom > .label {
+  float: left;
+  border: 1px solid #444;
+  padding: 1em;
+  background-color: #efefef;
+}
+.denom > .denom_amount {
+  float: left;
+  padding: 1em;
 }
