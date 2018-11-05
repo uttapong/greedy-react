@@ -10,15 +10,19 @@ class App extends Component {
     super(props)
     this.state = {
       error: false,
-      amount: "",
+      amount: props.amount || "",
       denoms: [],
       denomeWithLabel: ''
     };
     this.changeArray = [100, 50, 20, 10, 5.0, 1, 0.25, 0.1, 0.05, 0.01];
     this.changeLabelArray = ['100 dollar bill', '50 dollar bill', '20 dollar bill', '10 dollar bill', '5 dollar bill', '1 dollar bill', 'quarter', 'dime', 'nickel', 'penny'];
     this.changeLabelPArray = ['100 dollar bills', '50 dollar bills', '20 dollar bills', '10 dollar bills', '5 dollar bills', '1 dollar bills', 'quarters', 'dimes', 'nickels', 'pennies'];
+    
   }
-
+  componentDidMount(){
+    // console.log(this.state.amount)
+    this.computeChange(this.state.amount)
+  }
   computeChange(amount) {
     const result = [];
 
